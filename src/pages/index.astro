@@ -1,9 +1,10 @@
 ---
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import { Image } from 'astro:assets';
+import profilePic from '../images/profile.jpg';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Component Imports
-import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
@@ -47,11 +48,11 @@ import Skills from '../components/Skills.astro';
           </div>
         </Hero>
 
-        <img
+        <Image
+          src={profilePic}
           alt="Jumana Bohra working at her desk as a software engineer at Bombardier"
           width="700"
           height="660"
-          src="/assets/profile.jpg"
         />
       </header>
 
