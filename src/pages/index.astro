@@ -26,9 +26,24 @@ import Skills from '../components/Skills.astro';
           align="start"
         >
           <div class="roles">
-            <Pill><Icon icon="code" size="1.33em" /><a href="https://www.linkedin.com/in/jumana-bohra" style="color: white; text-decoration:none">Developer</a></Pill>
-            <Pill><Icon icon="microphone-stage" size="1.33em" /><a href="https://youtu.be/HpAosLLTfgQ" style="color: white; text-decoration:none">Poet</a></Pill>
-            <Pill><Icon icon="pencil-line" size="1.33em" /><a href = "https://youtu.be/9t2ECkw9wY4" style="color: white; text-decoration:none">Standup Comedian</a></Pill>
+            <Pill>
+              <Icon icon="code" size="1.33em" /><a
+                href="https://www.linkedin.com/in/jumana-bohra"
+                style="color: white; text-decoration:none">Developer</a
+              >
+            </Pill>
+            <Pill>
+              <Icon icon="microphone-stage" size="1.33em" /><a
+                href="https://youtu.be/HpAosLLTfgQ"
+                style="color: white; text-decoration:none">Poet</a
+              >
+            </Pill>
+            <Pill>
+              <Icon icon="pencil-line" size="1.33em" /><a
+                href="https://youtu.be/9t2ECkw9wY4"
+                style="color: white; text-decoration:none">Standup Comedian</a
+              >
+            </Pill>
           </div>
         </Hero>
 
@@ -42,37 +57,6 @@ import Skills from '../components/Skills.astro';
 
       <Skills />
     </div>
-
-    <!-- <main class="wrapper stack gap-20 lg:gap-48">
-      <section class="section with-background bg-variant">
-        <header class="section-header stack gap-2 lg:gap-4">
-          <h3>Mentions</h3>
-          <p>
-            I have been fortunate enough to receive praise for my work in
-            several publications. Take a look below to learn more.
-          </p>
-        </header>
-
-        <div class="gallery">
-          <Grid variant="small">
-            {
-              [
-                'Medium',
-                'BuzzFeed',
-                'The Next Web',
-                'awwwards.',
-                'TechCrunch',
-              ].map((brand) => (
-                <li class="mention-card">
-                  <p>{brand}</p>
-                </li>
-              ))
-            }
-          </Grid>
-        </div>
-      </section>
-    </main> -->
-
     <ContactCTA />
   </div>
 </BaseLayout>
@@ -86,7 +70,9 @@ import Skills from '../components/Skills.astro';
   }
 
   .roles {
-    display: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
   }
 
   .hero img {
@@ -108,6 +94,7 @@ import Skills from '../components/Skills.astro';
     .roles {
       margin-top: 0.5rem;
       display: flex;
+      flex-direction: row;
       gap: 0.5rem;
     }
 
