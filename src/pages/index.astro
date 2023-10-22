@@ -30,19 +30,19 @@ import Skills from '../components/Skills.astro';
             <Pill>
               <Icon icon="code" size="1.33em" /><a
                 href="https://www.linkedin.com/in/jumana-bohra"
-                style="color: white; text-decoration:none">Developer</a
+                class="pill-link">Developer</a
               >
             </Pill>
             <Pill>
               <Icon icon="microphone-stage" size="1.33em" /><a
-                href="https://youtu.be/HpAosLLTfgQ"
-                style="color: white; text-decoration:none">Poet</a
+                class="pill-link"
+                href="https://youtu.be/HpAosLLTfgQ">Poet</a
               >
             </Pill>
             <Pill>
               <Icon icon="pencil-line" size="1.33em" /><a
-                href="https://youtu.be/9t2ECkw9wY4"
-                style="color: white; text-decoration:none">Standup Comedian</a
+                class="pill-link"
+                href="https://youtu.be/9t2ECkw9wY4">Standup Comedian</a
               >
             </Pill>
           </div>
@@ -82,6 +82,11 @@ import Skills from '../components/Skills.astro';
     object-position: top;
     border-radius: 1.5rem;
     box-shadow: var(--shadow-md);
+  }
+
+  .pill-link {
+    color: white;
+    text-decoration: none;
   }
 
   @media (min-width: 50em) {
