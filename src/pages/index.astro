@@ -26,7 +26,7 @@ import Skills from '../components/Skills.astro';
           tagline="A Software Engineer based in Leeds, UK."
           align="start"
         >
-          <div class="roles">
+          <!-- <div class="roles">
             <Pill>
               <Icon icon="code" size="1.33em" /><a
                 href="https://www.linkedin.com/in/jumana-bohra"
@@ -45,7 +45,7 @@ import Skills from '../components/Skills.astro';
                 href="https://youtu.be/9t2ECkw9wY4">Standup Comedian</a
               >
             </Pill>
-          </div>
+          </div> -->
         </Hero>
 
         <Image
@@ -55,6 +55,56 @@ import Skills from '../components/Skills.astro';
           height="660"
         />
       </header>
+
+      <div class="roles2">
+        <div class="role-item">
+          <Pill>
+            <Icon icon="code" size="1.33em" /><a
+              href="https://www.linkedin.com/in/jumana-bohra"
+              class="pill-link">Developer</a
+            >
+          </Pill>
+          <iframe
+            class="pill-video"
+            src="https://www.youtube.com/embed/we_yM8sqr68?si=3k0QDETojS5NpxoV"
+            title="Data Bias in AI"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+
+        <div class="role-item">
+          <Pill>
+            <Icon icon="microphone-stage" size="1.33em" /><a
+              class="pill-link"
+              href="https://youtu.be/HpAosLLTfgQ">Poet</a
+            >
+          </Pill>
+          <iframe
+            src="https://www.youtube.com/embed/HpAosLLTfgQ?si=31cuQOjNqaPiuP51"
+            title="Awara Ishq"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            class="pill-video"></iframe>
+        </div>
+
+        <div class="role-item">
+          <Pill>
+            <Icon icon="pencil-line" size="1.33em" /><a
+              class="pill-link"
+              href="https://youtu.be/9t2ECkw9wY4">Standup Comedian</a
+            >
+          </Pill>
+          <iframe
+            src="https://www.youtube.com/embed/9t2ECkw9wY4?si=ULcD3a8dEXuKrba1"
+            title="New Girl in the City"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            class="pill-video"></iframe>
+        </div>
+      </div>
 
       <Skills />
     </div>
@@ -74,6 +124,21 @@ import Skills from '../components/Skills.astro';
     display: flex;
     gap: 0.5rem;
     flex-direction: column;
+  }
+
+  .roles2 {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+  }
+
+  .role-item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    min-height: 280px;
+    height: 280px;
+    justify-content: space-around;
   }
 
   .hero img {
@@ -102,6 +167,26 @@ import Skills from '../components/Skills.astro';
       display: flex;
       flex-direction: row;
       gap: 0.5rem;
+    }
+
+    .roles2 {
+      display: flex;
+      gap: 0.5rem;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .pill-video {
+      width: 300px;
+      height: 200px;
+    }
+
+    .role-item {
+      display: flex;
+      flex-direction: column;
+      min-height: 280px;
+      height: 280px;
+      justify-content: space-between;
     }
 
     .hero img {
