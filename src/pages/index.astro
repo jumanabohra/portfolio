@@ -2,7 +2,9 @@
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import { Image } from 'astro:assets';
 import profilePic from '../images/profile.jpg';
+import tryCatch from '../images/geekmance-try-catch.jpg';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import react from '@astrojs/react';
 
 // Component Imports
 import Hero from '../components/Hero.astro';
@@ -23,30 +25,9 @@ import Skills from '../components/Skills.astro';
       <header class="hero">
         <Hero
           title="Hello, I am Jumana Bohra"
-          tagline="A Software Engineer based in Leeds, UK."
+          tagline="A Senior Software Engineer based in Leeds, UK."
           align="start"
-        >
-          <!-- <div class="roles">
-            <Pill>
-              <Icon icon="code" size="1.33em" /><a
-                href="https://www.linkedin.com/in/jumana-bohra"
-                class="pill-link">Developer</a
-              >
-            </Pill>
-            <Pill>
-              <Icon icon="microphone-stage" size="1.33em" /><a
-                class="pill-link"
-                href="https://youtu.be/HpAosLLTfgQ">Poet</a
-              >
-            </Pill>
-            <Pill>
-              <Icon icon="pencil-line" size="1.33em" /><a
-                class="pill-link"
-                href="https://youtu.be/9t2ECkw9wY4">Standup Comedian</a
-              >
-            </Pill>
-          </div> -->
-        </Hero>
+        />
 
         <Image
           src={profilePic}
@@ -104,6 +85,15 @@ import Skills from '../components/Skills.astro';
             allowfullscreen
             class="pill-video"></iframe>
         </div>
+        <div class="role-item">
+          <Pill>
+            <Icon icon="microphone-stage" size="1.33em" /><a
+              class="pill-link"
+              href="https://example.com/humorist">Humorist</a
+            >
+          </Pill>
+          <Image src={tryCatch} alt="Humorist" class="pill-image" />
+        </div>
       </div>
 
       <Skills />
@@ -152,6 +142,11 @@ import Skills from '../components/Skills.astro';
   .pill-link {
     color: white;
     text-decoration: none;
+  }
+  .pill-image {
+    width: 250px;
+    height: 200px;
+    border: white 1.5px solid;
   }
 
   @media (min-width: 50em) {
