@@ -1,3 +1,18 @@
 {
-  "extends": "astro/tsconfigs/base"
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "astro/jsx",
+    "allowJs": true, // Allow JavaScript files
+    "strict": true, // Enable strict type-checking
+    "moduleResolution": "node", // Resolve modules like Node.js
+    "module": "ESNext", // Use modern JavaScript module syntax
+    "target": "ESNext", // Use modern JavaScript
+    "types": ["astro/env"], // Add Astro environment types
+    "skipLibCheck": true // Skip type checks for library files
+  },
+  "astroConfig": {
+    "outputFile": "astro.config.output.mjs"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
