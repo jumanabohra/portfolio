@@ -1,5 +1,7 @@
 # Jumana Bohra: portfolio
 
+Copyrights reserved by Jumana Bohra
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
