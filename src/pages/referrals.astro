@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Icon from '../components/Icon.astro';
+import Pill from '../components/Pill.astro';
+
+const referralCodes = [
+  {
+    name: "Octopus Energy",
+    code: "sage-storm-565",
+    description: "Sign up for sustainable energy with Octopus",
+    link: "https://share.octopus.energy/sage-storm-565"
+  },
+  {
+    name: "Uber Eats",
+    code: "eats-jumanab167ue",
+    description: "Get discounts on food delivery",
+    link: "https://www.ubereats.com"
+  },
+  {
+    name: "American Express",
+    code: "jUMANBhlOk",
+    description: "Get the British Airways American Express® Credit Card",
+    link: "https://americanexpress.com/en-gb/referral/ba-classic-credit?ref=jUMANBhlOk&XL=MNANS"
+  },
+  {
+    name: "TrainPal",
+    code: "02529e73",
+    description: "Save money on train tickets",
+    link: "https://www.trainpal.com"
+  },
+  {
+    name: "Revolut",
+    code: "jumanawer2!APR2-25-VR-GB",
+    description: "Join Revolut for global money management",
+    link: "https://revolut.com/referral/?referral-code=jumanawer2!APR2-25-VR-GB"
+  },
+  {
+    name: "Talk Mobile",
+    code: "jumanab-8",
+    description: "Get mobile services with Talk Mobile",
+    link: "https://refer.talkmobile.co.uk/jumanab-8"
+  },
+  {
+    name: "Condition Gym Leeds",
+    code: "Jumana Bohra",
+    description: "Join Condition Gym in Leeds",
+    link: "https://conditiongym.co.uk"
+  }
+];
+---
+
+<BaseLayout title="Referral Codes" description="A collection of referral codes and discounts">
+  <div class="stack gap-20 lg:gap-48">
+    <div class="wrapper stack gap-8 lg:gap-20">
+      <header class="hero">
+        <Hero
+          title="Referral Codes"
+          tagline="Save money with these referral codes and discounts"
+          align="start"
+        />
+      </header>
+
+      <div class="referrals-grid">
+        {referralCodes.map((referral) => (
+          <div class="referral-card">
+            <Pill>
+              <Icon icon="gift" size="1.33em" />
+              <span class="pill-text">{referral.name}</span>
+            </Pill>
+            <div class="referral-content">
+              <h3>{referral.code}</h3>
+              <p>{referral.description}</p>
+              <a href={referral.link} class="referral-link" target="_blank" rel="noopener noreferrer">
+                Use Code
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .referrals-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .referral-card {
+    background: var(--gradient-subtle);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-800);
+  }
+
+  .referral-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .referral-content h3 {
+    font-size: var(--text-xl);
+    color: var(--gray-100);
+    margin: 0;
+    word-break: break-all;
+  }
+
+  .referral-content p {
+    color: var(--gray-300);
+    margin: 0;
+  }
+
+  .referral-link {
+    display: inline-block;
+    background: var(--gray-100);
+    color: var(--gray-900);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: transform 0.2s ease;
+  }
+
+  .referral-link:hover {
+    transform: translateY(-2px);
+  }
+
+  .pill-text {
+    color: white;
+    margin-left: 0.5rem;
+  }
+
+  @media (min-width: 50em) {
+    .referrals-grid {
+      gap: 3rem;
+    }
+  }
+</style> 
